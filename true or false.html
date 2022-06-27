@@ -64,12 +64,12 @@
         var input = event.key;
         if(input == "t" || input == "f"){
             if (listOfQuestions[count].a == input) {
-                alert("You got it right!");
+                alert("You must be a fan! 100% right!");
                 score++;
                 document.getElementById("score").innerHTML = "Score: " + score;
             }
             else{
-                alert("WRONG");
+                alert("WRONG! Go and do your homework!");
             }
             count++;
             if(count < 19){
