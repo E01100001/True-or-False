@@ -9,39 +9,19 @@
     <h1>Open the console to see the magic!</h1>
 
     <script>
-    var exposed = "This string is visible everywhere!";
+    var listOfQuestions=["Batman's father's name is Thomas Wayne.", "Naruto's signature food is Ramen.","Vanny in FNAF is Roxanne.","Voltron is made out of giant robotic mice.","Legolas's lastname is elfington."]
+    var answers=[true,true,false,false,false]
 
-    function firstFunction(message) {
-      // Inside of firstFunction, I can see both exposed and
-      // message.
-      console.log(message + exposed);
+    for (var i = 0; i < 5; i++) {
+        prompt(listOfQuestions[i] + " True or False");
     }
 
-    firstFunction("Oh my! ");
-
-    // This will throw an error--the message variable
-    // is only visible *inside* of firstFunction.
-    // console.log(message);
-
-    function secondFunction(exposed) {
-      // secondFunction *should* be able to see the exposed
-      //  variable we declared above, but we've "shadowed" it!
-      console.log(exposed);
+    if (listOfQuestions[0] == true){
+        console.log("Your a true DC fan!")
     }
 
-    secondFunction("This isn't what I thought I wrote...");
+   
 
-    // Finally, keep in mind that using "return" lets us
-    // give something back to whomever called the function.
-    function thirdFunction(message) {
-      return message + exposed;
-    }
-
-
-    // Try to do things this way, instead of using console.log
-    // inside of your functions.
-    var message = thirdFunction("Oh my! ");
-    console.log(message);
     </script>
 
   </body>
