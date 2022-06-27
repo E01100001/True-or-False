@@ -11,10 +11,104 @@
     <iframe width="399" height="300" src="https://www.youtube.com/embed/f_c12NQe67E" title="Adventure Time Stakes Full Outro Song [fixed volume]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     
     <script>
+    var count = 0, score = 0; 
+
+          alert("We are going to play a true or false game!")
+         alert("I, your beloved computer L.E.D, will ask 10 questions.")
+         alert("You have to guess if the statement I made is either true or false.")
+         alert("Hint:Some are biased and only 1 question is both true AND false,depending on how you look at it.")
+         alert("Click on the video to play music as you play. Right click on the video and press 'Loop' to loop the song.")
+         alert("Good Luck!")
+
     var listOfQuestions=[
-         
+     { q: "Batman's father's name is Thomas Wayne.", a: "true" },
+        { q: "Naruto's signature food is Ramen.", a: "true" },
+        { q: "Vanny in FNAF is Roxanne.", a: "false" },
+        { q: "Voltron is made out of giant robotic mice.", a: "false" },
+        { q: "Legolas's lastname is elfington.", a: "false" },
+        { q: "Hippocampus is half horse-half fish.", a: "ftrue" },
+        { q: "Grogu is cute", a: "true" },
+        { q: "Ahsoka Tano is the best character", a: "true" },
+        { q: "life is fun", a: "true and false" },
+        { q: "Anima is a interesting comic book series", a: "true" },
+        { q: "Turning Red was a very cute movie", a: "true" }
+    ];
+
+    document.getElementById("question").innerHTML = array[count].q;
+
     
-    
+    document.onkeyup   = function (event) {
+        var input = event.key;
+        if(input == "true" || input == "false"){
+            if (array[count].a == input) {
+                alert("You must be a fan! Your 100% right!");
+                score++;
+                document.getElementById("score").innerHTML = "Score: " + score;
+            }
+            else{
+                alert("WRONG! Go and do your homework!");
+            }
+            count++;
+            if(count < 10){
+                document.getElementById("question").innerHTML = array[count].q;
+            }
+            else{
+                alert("End of the game, my friend. Put your fingers off the keys!, and yes a hot dog is a taco. I don't care what you say.");
+            }
+        }
+        else{
+            alert("Please type either t or f");
+        }
+    }
+
+
+    function displayTutorial() {
+            var x = document.getElementById("tutorial");
+            var y = document.getElementById("tutorialButton");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                y.textContent = "Hide Tutorial";
+            } else {
+                x.style.display = "none";
+                y.textContent = "Show Tutorial";
+            }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         alert("We are going to play a true or false game!")
+         alert("I, your beloved computer L.E.D, will ask 10 questions.")
+         alert("You have to guess if the statement I made is either")
+    var listOfQuestions=[
      { q: "Batman's father's name is Thomas Wayne.", a: "true" },
         { q: "Naruto's signature food is Ramen.", a: "true" },
         { q: "Vanny in FNAF is Roxanne.", a: "false" },
@@ -28,20 +122,6 @@
         { q: "Turning Red was a very cute movie", a: "true" }
     ];
     
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    var answers=[true,true,false,false,false]
     document.onkeyup = function(event) {
         var userGuess = event.key;
     }
