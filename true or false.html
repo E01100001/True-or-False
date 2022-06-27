@@ -43,7 +43,7 @@
         { q: "Hawaiian Pizza is the best pizza", a: "true" }
     ];
 
-    document.getElementById("question").innerHTML = array[count].q;
+    document.getElementById("question").innerHTML = listOfQuestions[count].q;
 
     
     document.onkeyup   = function (event) {
@@ -59,7 +59,7 @@
             }
             count++;
             if(count < 20){
-                document.getElementById("question").innerHTML = array[count].q;
+                document.getElementById("question").innerHTML = listOfQuestions[count].q;
             }
             else{
                 alert("End of the game, my friend. Take your fingers off the keys!. Yes, a Hawaiian Pizza is the best pizza. If you have something to say on the contrary, you can take it up to my complaint department: the trash can.");
