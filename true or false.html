@@ -81,25 +81,12 @@
             }
             else{
                 alert("End of game, so take your fingers off the keys! Yes, Hawaiian Pizza is the best pizza there is. If you have anything on the contrary to say, you can take it up tp my complaint department: the trash.");
-                    alert("Good Job! Refresh the page to start again!")
+                    alert("Good Job! Your score is: " + document.getElementById("score").innerHTML + ". You get an extra point just for playing! Refresh the page to start again!")
                }
         }
         else{
             alert("Please type either t or f");
         }
-    }
-
-
-    function displayTutorial() {
-            var x = document.getElementById("tutorial");
-            var y = document.getElementById("tutorialButton");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-                y.textContent = "Hide Tutorial";
-            } else {
-                x.style.display = "none";
-                y.textContent = "Show Tutorial";
-            }
     }
     </script>
      <iframe width="399" height="300" src="https://www.youtube.com/embed/f_c12NQe67E" title="Adventure Time Stakes Full Outro Song [fixed volume]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
