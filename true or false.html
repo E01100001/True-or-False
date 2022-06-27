@@ -49,7 +49,7 @@
     document.onkeyup   = function (event) {
         var input = event.key;
         if(input == "true" || input == "false"){
-            if (array[count].a == input) {
+            if (listOfQuestions[count].a == input) {
                 alert("You must be a fan! Your 100% right!");
                 score++;
                 document.getElementById("score").innerHTML = "Score: " + score;
