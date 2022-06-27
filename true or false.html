@@ -15,20 +15,48 @@
         var userGuess = event.key;
     }
 
-
-
-
-
-
     for (var i = 0; i < 5; i++) {
         prompt(listOfQuestions[i] + " true or false");
     }
 
 
-   if( listOfQuestions[0] == true && userGuess == "true"){
+   if(listOfQuestions[0] == true && userGuess == "true"){
         alert("You must be a DC fan! Correct!")
+   if(listOfQuestions[0] == true && userGuess == "false") {
+        alert("Go back and watch some Batman! Incorrect!")
    }
-   
+}
+
+if(listOfQuestions[1] == true && userGuess == "true"){
+        alert("You must be a Naruto fan! Correct!")
+   if(listOfQuestions[1] == true && userGuess == "false") {
+        alert("Go back and watch some Naruto! Incorrect!")
+   }
+}
+
+if(listOfQuestions[2] == false && userGuess == "false"){
+        alert("You must be a FNAF fan! Correct!")
+   if(listOfQuestions[2] == false && userGuess == "true") {
+        alert("Go back and watch,read and play some FNAF! Incorrect!")
+   }
+}
+
+if(listOfQuestions[3] == false && userGuess == "false"){
+        alert("You must be a Voltron fan! Correct!")
+   if(listOfQuestions[3] == false && userGuess == "true") {
+        alert("Go back and watch some Voltron! Incorrect!")
+   }
+}
+
+if(listOfQuestions[4] == false && userGuess == "false"){
+        alert("You must be a Lord of the Rings fan! Correct!")
+   if(listOfQuestions[4] == false && userGuess == "true") {
+        alert("Go back and watch some Lord of the Rings or Hobbit! Incorrect!")
+   }
+}
+
+
+
 
     </script>
 
