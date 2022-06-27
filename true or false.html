@@ -1,72 +1,85 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>True or false game!</title>
-  </head>
-  <body>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34</title>
+    <style>
+        body{
+            background-color: rgb(0, 0, 0);
+        }
 
-    <h1>True or false game!</h1>
-   
-    <iframe width="399" height="300" src="https://www.youtube.com/embed/f_c12NQe67E" title="Adventure Time Stakes Full Outro Song [fixed volume]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    
+        .button {
+            background-color: rgb(61, 61, 61);
+            color: rgb(255, 253, 253);
+        }
+    </style>
+</head>
+<body>
+    <h1>Answer the question below</h1>
+    <h2>READ THE TUTORIAL</h2>
+    <h3 id = "score">Score: 0</h3>
+    </div>
+    <hr style="width:50%;height:3px;border-width:0;color:gray;background-color:gray">
+    <h1 id = "question">e</h1>
     <script>
-    var count = 0, score = 0; 
-
           alert("We are going to play a true or false game!")
          alert("I, your beloved computer L.E.D, will ask 10 questions.")
-         alert("You have to guess if the statement I made is either true or false.")
-         alert("Hint: Some are biased and only 1 question is both true AND false, depending on how you look at it.")
+         alert("You have to guess if the statement I made is either true or false. 't' = true and 'f' = false.")
+         alert("Hint: Some are biased.")
          alert("Click on the video to play music as you play. Right click on the video and press 'Loop' to loop the song.")
          alert("Good Luck!")
 
+    var count = 0, score = 0; 
+
     var listOfQuestions=[
-     { q: "Batman's father's name is Thomas Wayne.", a: "true" },
-        { q: "Naruto's signature food is Ramen.", a: "true" },
-        { q: "Vanny in FNAF is Roxanne.", a: "false" },
-        { q: "Voltron is made out of giant robotic mice.", a: "false" },
-        { q: "Legolas's lastname is elfington.", a: "false" },
-        { q: "Hippocampus is half horse-half fish.", a: "ftrue" },
-        { q: "Grogu is cute", a: "true" },
-        { q: "Ahsoka Tano is the best character", a: "true" },
-        { q: "life is fun", a: "true and false" },
-        { q: "'Anima' is a interesting comic book series", a: "true" },
-        { q: "Turning Red was a very cute movie", a: "true" },
-        { q: "Furies are the best", a: "true" },
-        { q: "The Hollow was annoying", a: "true" },
-        { q: "Burritos are the future", a: "true" },
-        { q: "Mr.Roger wears an Itachi ring", a: "true" },
-        { q: "Supreme pizzas are supreme", a: "true" },
-        { q: "Mac & cheese is better than ribs", a: "true" },
-        { q: "Shrimp is worse than chicken", a: "false" },
-        { q: "flamin' hot mac & cheese is not very hot", a: "true" },
-        { q: "Hawaiian Pizza is the best pizza", a: "true" }
+     { q: "Batman's father's name is Thomas Wayne.", a: "t" },
+        { q: "Naruto's signature food is Ramen.", a: "t" },
+        { q: "Vanny in FNAF is Roxanne.", a: "f" },
+        { q: "Voltron is made out of giant robotic mice.", a: "f" },
+        { q: "Legolas's lastname is elfington.", a: "f" },
+        { q: "Hippocampus is half horse-half fish.", a: "t" },
+        { q: "Grogu is cute", a: "t" },
+        { q: "Ahsoka Tano is the best character", a: "t" },
+        { q: "'Anima' is a interesting comic book series", a: "t" },
+        { q: "Turning Red was a very cute movie", a: "t" },
+        { q: "Furies are the best", a: "t" },
+        { q: "The Hollow was annoying", a: "t" },
+        { q: "Burritos are the future", a: "t" },
+        { q: "Mr.Roger wears an Itachi ring", a: "t" },
+        { q: "Supreme pizzas are supreme", a: "t" },
+        { q: "Mac & cheese is better than ribs", a: "t" },
+        { q: "Shrimp is worse than chicken", a: "f" },
+        { q: "flamin' hot mac & cheese is not very hot", a: "t" },
+        { q: "Hawaiian Pizza is the best pizza", a: "t" }
     ];
+
 
     document.getElementById("question").innerHTML = listOfQuestions[count].q;
 
     
     document.onkeyup   = function (event) {
         var input = event.key;
-        if(input == "true" || input == "false"){
+        if(input == "t" || input == "f"){
             if (listOfQuestions[count].a == input) {
-                alert("You must be a fan! Your 100% right!");
+                alert("You got it right!");
                 score++;
                 document.getElementById("score").innerHTML = "Score: " + score;
             }
             else{
-                alert("WRONG! Go and do your homework!");
+                alert("WRONG");
             }
             count++;
-            if(count < 20){
+            if(count < 19){
                 document.getElementById("question").innerHTML = listOfQuestions[count].q;
             }
             else{
-                alert("End of the game, my friend. Take your fingers off the keys!. Yes, a Hawaiian Pizza is the best pizza. If you have something to say on the contrary, you can take it up to my complaint department: the trash can.");
+                alert("End of game, so take your fingers off the keys! Yes, Hawaiian Pizza is the best pizza there is. If you have anything on the contrary to say, you can take it up tp my complaint department: the trash.");
             }
         }
         else{
-            alert("Please type either true or false");
+            alert("Please type either t or f");
         }
     }
 
@@ -82,99 +95,6 @@
                 y.textContent = "Show Tutorial";
             }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-         alert("We are going to play a true or false game!")
-         alert("I, your beloved computer L.E.D, will ask 10 questions.")
-         alert("You have to guess if the statement I made is either")
-    var listOfQuestions=[
-     { q: "Batman's father's name is Thomas Wayne.", a: "true" },
-        { q: "Naruto's signature food is Ramen.", a: "true" },
-        { q: "Vanny in FNAF is Roxanne.", a: "false" },
-        { q: "Voltron is made out of giant robotic mice.", a: "false" },
-        { q: "Legolas's lastname is elfington.", a: "false" },
-        { q: "Hippocampus is half horse-half fish.", a: "ftrue" },
-        { q: "Grogu is cute", a: "true" },
-        { q: "Ahsoka Tano is the best character", a: "true" },
-        { q: "life is fun", a: "true and false" },
-        { q: "Anima is a interesting comic book series", a: "true" },
-        { q: "Turning Red was a very cute movie", a: "true" }
-    ];
-    
-    document.onkeyup = function(event) {
-        var userGuess = event.key;
-    }
-
-    for (var i = 0; i < 5; i++) {
-        prompt(listOfQuestions[i] + " true or false");
-    }
-
-
-   if(listOfQuestions[0] == true && userGuess == "true"){
-        alert("You must be a DC fan! Correct!")
-   if(listOfQuestions[0] == true && userGuess == "false") {
-        alert("Go back and watch some Batman! Incorrect!")
-   }
-}
-
-if(listOfQuestions[1] == true && userGuess == "true"){
-        alert("You must be a Naruto fan! Correct!")
-   if(listOfQuestions[1] == true && userGuess == "false") {
-        alert("Go back and watch some Naruto! Incorrect!")
-   }
-}
-
-if(listOfQuestions[2] == false && userGuess == "false"){
-        alert("You must be a FNAF fan! Correct!")
-   if(listOfQuestions[2] == false && userGuess == "true") {
-        alert("Go back and watch,read and play some FNAF! Incorrect!")
-   }
-}
-
-if(listOfQuestions[3] == false && userGuess == "false"){
-        alert("You must be a Voltron fan! Correct!")
-   if(listOfQuestions[3] == false && userGuess == "true") {
-        alert("Go back and watch some Voltron! Incorrect!")
-   }
-}
-
-if(listOfQuestions[4] == false && userGuess == "false"){
-        alert("You must be a Lord of the Rings fan! Correct!")
-   if(listOfQuestions[4] == false && userGuess == "true") {
-        alert("Go back and watch some Lord of the Rings or Hobbit! Incorrect!")
-   }
-}
     </script>
-
-  </body>
+</body>
 </html>
