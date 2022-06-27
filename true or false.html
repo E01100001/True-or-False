@@ -11,13 +11,21 @@
     <script>
     var listOfQuestions=["Batman's father's name is Thomas Wayne.", "Naruto's signature food is Ramen.","Vanny in FNAF is Roxanne.","Voltron is made out of giant robotic mice.","Legolas's lastname is elfington."]
     var answers=[true,true,false,false,false]
+    document.onkeyup = function(event) {
+        var userGuess = event.key;
+    }
+
+
+
+
+
 
     for (var i = 0; i < 5; i++) {
         prompt(listOfQuestions[i] + " true or false");
     }
 
-    if (listOfQuestions[0] === true){
-        console.log("Your a true DC fan!")
+    if (userGuess == true for listOfQuestions[0]){
+        alert("Your a true DC fan!")
     }
 
    
